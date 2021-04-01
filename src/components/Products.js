@@ -17,7 +17,7 @@ function Products({ data }) {
 									<img src={image} alt={title} />
 									<p>{title}</p>
 								</a>
-								<div className='product-price'>{formatCurrency(price)}</div>
+								<div className='product-price'>{formatCurrency(price)} </div>
 								<button className='button primary'>Add To Chart</button>
 							</div>
 						</li>
