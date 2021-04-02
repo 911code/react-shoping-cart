@@ -1,7 +1,6 @@
 import React from "react";
-// hello
 
-function Products({ data }) {
+function Products({ data, addToCart }) {
 	const formatCurrency = (num) => {
 		return ` $ ${Number(num.toFixed(2)).toLocaleString()} `;
 	};
@@ -17,8 +16,12 @@ function Products({ data }) {
 									<img src={image} alt={title} />
 									<p>{title}</p>
 								</a>
-								<div className='product-price'>{formatCurrency(price)}</div>
-								<button className='button primary'>Add To Chart</button>
+								<div className='product-price'>{formatCurrency(price)} </div>
+								<button
+									className='button primary'
+									onClick={() => addToCart(item)}>
+									Add To Chart
+								</button>
 							</div>
 						</li>
 					);
